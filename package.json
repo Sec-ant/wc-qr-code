@@ -1,0 +1,48 @@
+{
+  "name": "wc-qr-code",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "./dist/**/*"
+  ],
+  "main": "./dist/index.js",
+  "exports": {
+    "import": "./dist/index.js",
+    "default": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "vite",
+    "lint": "tsc --noEmit --emitDeclarationOnly false",
+    "prebuild": "npm run lint",
+    "build": "vite build",
+    "postbuild": "tsc",
+    "prepublishOnly": "npm run build",
+    "ncu": "npx npm-check-updates -u",
+    "postncu": "npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sec-ant/wc-qr-code"
+  },
+  "homepage": "https://github.com/Sec-ant/wc-qr-code",
+  "bugs": {
+    "url": "https://github.com/Sec-ant/wc-qr-code/issues"
+  },
+  "keywords": [
+    "web-component",
+    "qr-code",
+    "qrcode",
+    "lit"
+  ],
+  "author": "Ze-Zheng Wu",
+  "license": "MIT",
+  "dependencies": {
+    "@ribpay/qr-code-generator": "^1.0.6",
+    "lit": "^2.8.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9"
+  }
+}
