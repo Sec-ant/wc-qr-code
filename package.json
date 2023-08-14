@@ -1,5 +1,5 @@
 {
-  "name": "wc-qr-code",
+  "name": "@sec-ant/wc-qr-code",
   "private": false,
   "version": "0.0.1",
   "type": "module",

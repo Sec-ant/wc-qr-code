@@ -1,11 +1,11 @@
-# wc-qr-code
+# @sec-ant/wc-qr-code
 
 A QR Code Web Component Powered by [Lit](https://lit.dev/).
 
 ## Install
 
 ```bash
-npm i wc-qr-code
+npm i @sec-ant/wc-qr-code
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ Please use a build tool to install and import this package. This package is not 
 
 ```ts
 // This statement will automatically register <qr-code> in the global registry.
-import "wc-qr-code";
+import "@sec-ant/wc-qr-code";
 ```
 
 ```html
