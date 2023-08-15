@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import { dependencies } from "./package.json";
 
 export default defineConfig({
   build: {
@@ -10,7 +11,9 @@ export default defineConfig({
     },
     minify: false,
     rollupOptions: {
-      external: [/^lit/, "@ribpay/qr-code-generator"],
+      external: Object.keys(dependencies).map(
+        (packageName) => new RegExp(`^${packageName}`)
+      ),
     },
   },
 });
