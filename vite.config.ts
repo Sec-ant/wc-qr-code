@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import minifyLiterals from "rollup-plugin-minify-html-literals-v3";
 import { dependencies } from "./package.json";
 
 export default defineConfig({
@@ -6,6 +7,8 @@ export default defineConfig({
     lib: {
       entry: {
         index: "./src/index.ts",
+        pure: "./src/pure.ts",
+        "side-effects": "./src/side-effects.ts",
       },
       formats: ["es"],
     },
@@ -16,4 +19,5 @@ export default defineConfig({
       ),
     },
   },
+  plugins: [minifyLiterals()],
 });
