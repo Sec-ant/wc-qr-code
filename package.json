@@ -1,5 +1,6 @@
 {
   "name": "@sec-ant/wc-qr-code",
+  "description": "A QR Code Web Component Powered by Lit",
   "private": false,
   "version": "0.1.0",
   "type": "module",
@@ -39,7 +40,7 @@
   "author": "Ze-Zheng Wu",
   "license": "MIT",
   "dependencies": {
-    "@ribpay/qr-code-generator": "^1.0.6",
+    "@sec-ant/qr-code-generator": "^0.0.1",
     "lit": "^2.8.0"
   },
   "devDependencies": {

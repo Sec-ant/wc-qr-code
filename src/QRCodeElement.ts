@@ -1,6 +1,6 @@
 import { LitElement, html } from "lit";
 import { property } from "lit/decorators.js";
-import qrcodegen from "@ribpay/qr-code-generator";
+import { Ecc, QrCode } from "@sec-ant/qr-code-generator";
 
 export class QRCodeElement extends LitElement {
   /**
@@ -24,28 +24,28 @@ export class QRCodeElement extends LitElement {
     converter: {
       fromAttribute: (value) => {
         if (value === null || value === "") {
-          return qrcodegen.QrCode.Ecc.LOW;
+          return Ecc.LOW;
         }
         switch (value.toLowerCase()) {
           case "l":
           case "low":
-            return qrcodegen.QrCode.Ecc.LOW;
+            return Ecc.LOW;
           case "m":
           case "medium":
-            return qrcodegen.QrCode.Ecc.MEDIUM;
+            return Ecc.MEDIUM;
           case "q":
           case "quartile":
-            return qrcodegen.QrCode.Ecc.QUARTILE;
+            return Ecc.QUARTILE;
           case "h":
           case "high":
-            return qrcodegen.QrCode.Ecc.HIGH;
+            return Ecc.HIGH;
           default:
             throw new TypeError(`Unsupported ECC level: ${value}`);
         }
       },
     },
   })
-  ecc = qrcodegen.QrCode.Ecc.LOW;
+  ecc = Ecc.LOW;
 
   /**
    * The QR Code quiet zone.
@@ -75,7 +75,7 @@ export class QRCodeElement extends LitElement {
     if (this.border < 0) {
       throw new RangeError("Border must be non-negative");
     }
-    const qr = qrcodegen.QrCode.encodeText(this.value, this.ecc);
+    const qr = QrCode.encodeText(this.value, this.ecc);
     const parts: string[] = [];
     for (let y = 0; y < qr.size; ++y) {
       for (let x = 0; x < qr.size; ++x) {
