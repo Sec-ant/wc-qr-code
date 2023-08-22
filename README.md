@@ -1,6 +1,6 @@
 # @sec-ant/wc-qr-code
 
-A QR Code Web Component Powered by [Lit](https://lit.dev/).
+A `<qr-code>` web component Powered by [Lit](https://lit.dev/).
 
 ## Install
 

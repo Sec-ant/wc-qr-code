@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import minifyLiterals from "rollup-plugin-minify-html-literals-v3";
 import { dependencies } from "./package.json";
@@ -20,4 +21,15 @@ export default defineConfig({
     },
   },
   plugins: [minifyLiterals()],
+  test: {
+    browser: {
+      enabled: true,
+      headless: true,
+      name: "chromium",
+      provider: "playwright",
+    },
+    coverage: {
+      provider: "istanbul",
+    },
+  },
 });

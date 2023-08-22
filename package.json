@@ -1,27 +1,16 @@
 {
   "name": "@sec-ant/wc-qr-code",
-  "description": "A QR Code Web Component Powered by Lit",
+  "description": "A <qr-code> web component powered by Lit",
   "private": false,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "files": [
-    "./dist/**/*"
+    "./dist"
   ],
-  "main": "./dist/index.js",
   "exports": {
     ".": "./dist/index.js",
     "./pure": "./dist/pure.js",
     "./side-effects": "./dist/side-effects.js"
-  },
-  "scripts": {
-    "dev": "vite",
-    "lint": "tsc --noEmit --emitDeclarationOnly false",
-    "prebuild": "npm run lint",
-    "build": "vite build",
-    "postbuild": "tsc",
-    "prepublishOnly": "npm run build",
-    "ncu": "npx npm-check-updates -u",
-    "postncu": "npm i"
   },
   "repository": {
     "type": "git",
@@ -29,7 +18,8 @@
   },
   "homepage": "https://github.com/Sec-ant/wc-qr-code",
   "bugs": {
-    "url": "https://github.com/Sec-ant/wc-qr-code/issues"
+    "url": "https://github.com/Sec-ant/wc-qr-code/issues",
+    "email": "zzwu@zju.edu.cn"
   },
   "keywords": [
     "web-component",
@@ -37,15 +27,41 @@
     "qrcode",
     "lit"
   ],
-  "author": "Ze-Zheng Wu",
+  "author": {
+    "name": "Ze-Zheng Wu"
+  },
   "license": "MIT",
+  "config": {},
+  "scripts": {
+    "dev": "vite",
+    "type-check": "tsc --noEmit --emitDeclarationOnly false",
+    "prebuild": "npm run type-check",
+    "build": "vite build",
+    "postbuild": "tsc",
+    "pretest": "npm run build",
+    "pretest:ui": "npm run build",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "prepublishOnly": "npm run build",
+    "ncu": "npx npm-check-updates -u",
+    "postncu": "npm i"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "@vitest/browser": "^0.34.2",
+    "@vitest/coverage-istanbul": "^0.34.2",
+    "@vitest/ui": "^0.34.2",
+    "eslint": "^8.47.0",
+    "npm-check-updates": "^16.12.3",
+    "playwright": "^1.37.1",
+    "rollup-plugin-minify-html-literals-v3": "^1.3.3",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.2"
+  },
   "dependencies": {
     "@sec-ant/qr-code-generator": "^0.0.3",
     "lit": "^2.8.0"
-  },
-  "devDependencies": {
-    "rollup-plugin-minify-html-literals-v3": "^1.3.3",
-    "typescript": "^5.1.6",
-    "vite": "^4.4.9"
   }
 }
