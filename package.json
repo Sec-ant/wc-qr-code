@@ -2,7 +2,7 @@
   "name": "@sec-ant/wc-qr-code",
   "description": "A QR Code Web Component Powered by Lit",
   "private": false,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "files": [
     "./dist/**/*"
