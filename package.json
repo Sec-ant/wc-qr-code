@@ -40,7 +40,7 @@
   "author": "Ze-Zheng Wu",
   "license": "MIT",
   "dependencies": {
-    "@sec-ant/qr-code-generator": "^0.0.1",
+    "@sec-ant/qr-code-generator": "^0.0.3",
     "lit": "^2.8.0"
   },
   "devDependencies": {
