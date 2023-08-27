@@ -3,7 +3,7 @@
     "target": "ESNext",
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
-    "module": "ESNext",
+    "module": "NodeNext",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "types": [],
     "skipLibCheck": true,

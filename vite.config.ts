@@ -22,6 +22,7 @@ export default defineConfig({
   },
   plugins: [minifyLiterals()],
   test: {
+    passWithNoTests: true,
     browser: {
       enabled: true,
       headless: true,

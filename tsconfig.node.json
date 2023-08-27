@@ -2,7 +2,7 @@
   "extends": ["./tsconfig.json"],
   "compilerOptions": {
     "composite": true,
-    "types": ["node", "vitest"],
+    "types": ["node"],
     "resolveJsonModule": true,
     "allowJs": true
   },
