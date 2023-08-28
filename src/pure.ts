@@ -1,1 +1,1 @@
-export { QRCodeElement } from "./QRCodeElement.js";
+export { QrCodeElement } from "./QrCodeElement.js";

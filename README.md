@@ -16,14 +16,14 @@ This packages exports 3 import paths: `@sec-ant/wc-qr-code/pure`, `@sec-ant/wc-q
 
 ### `@sec-ant/wc-qr-code/pure`
 
-This subpath exports the `QRCodeElement` class. You'll have to manually register it on the [`CustomElementRegistry`](https://developer.mozilla.org/docs/Web/API/CustomElementRegistry) to use the web component.
+This subpath exports the `QrCodeElement` class. You'll have to manually register it on the [`CustomElementRegistry`](https://developer.mozilla.org/docs/Web/API/CustomElementRegistry) to use the web component.
 
 In your script:
 
 ```ts
-import { QRCodeElement } from "@sec-ant/wc-qr-code/pure";
+import { QrCodeElement } from "@sec-ant/wc-qr-code/pure";
 
-customElements.define("qr-code", QRCodeElement);
+customElements.define("qr-code", QrCodeElement);
 ```
 
 Afterwards, in your html file:
@@ -34,19 +34,19 @@ Afterwards, in your html file:
 
 Before https://github.com/WICG/webcomponents/issues/716 is resolved, you'll have to handle possible tag name collisions yourself.
 
-If you use Typescript and wants `document.createElement("qr-code")` to infer the `QRCodeElement` type for you, you should create a declaration file to augment the types:
+If you use Typescript and wants `document.createElement("qr-code")` to infer the `QrCodeElement` type for you, you should create a declaration file to augment the types:
 
 ```ts
 declare global {
   interface HTMLElementTagNameMap {
-    "qr-code": QRCodeElement;
+    "qr-code": QrCodeElement;
   }
 }
 ```
 
 ### `@sec-ant/wc-qr-code/side-effects`
 
-This subpath will automatically register `QRCodeElement` on the `CustomElementRegistry` with the tag name `qr-code`, only if the tag name `qr-code` isn't already registered. `HTMLElementTagNameMap` will be automatically augmented.
+This subpath will automatically register `QrCodeElement` on the `CustomElementRegistry` with the tag name `qr-code`, only if the tag name `qr-code` isn't already registered. `HTMLElementTagNameMap` will be automatically augmented.
 
 In your script:
 
@@ -62,7 +62,7 @@ Afterwards, in your html file:
 
 ### `@sec-ant/wc-qr-code`
 
-This works just like `side-effects` but also exports the `QRCodeElement` class.
+This works just like `side-effects` but also exports the `QrCodeElement` class.
 
 ## Attributes
 

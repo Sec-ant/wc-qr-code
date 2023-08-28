@@ -2,7 +2,7 @@ import { LitElement, html } from "lit";
 import { property } from "lit/decorators.js";
 import { Ecc, QrCode } from "@sec-ant/qr-code-generator";
 
-export class QRCodeElement extends LitElement {
+export class QrCodeElement extends LitElement {
   /**
    * Closed mode shadow dom
    */

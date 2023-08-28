@@ -1,11 +1,11 @@
-import { QRCodeElement } from "./QRCodeElement.js";
+import { QrCodeElement } from "./QrCodeElement.js";
 
 const TAG_NAME = "qr-code";
 
-customElements.get(TAG_NAME) ?? customElements.define(TAG_NAME, QRCodeElement);
+customElements.get(TAG_NAME) ?? customElements.define(TAG_NAME, QrCodeElement);
 
 declare global {
   interface HTMLElementTagNameMap {
-    [TAG_NAME]: QRCodeElement;
+    [TAG_NAME]: QrCodeElement;
   }
 }
