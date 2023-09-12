@@ -63,7 +63,7 @@
     "vitest": "^0.34.4"
   },
   "dependencies": {
-    "@sec-ant/qr-code-generator": "^0.0.5",
+    "@sec-ant/qr-code-generator": "^1.0.0",
     "lit": "^2.8.0"
   }
 }
