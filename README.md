@@ -2,7 +2,7 @@
 
 [![release status](https://github.com/Sec-ant/wc-qr-code/actions/workflows/release.yml/badge.svg)](https://github.com/Sec-ant/wc-qr-code/actions/workflows/release.yml)
 
-A `<qr-code>` web component Powered by [Lit](https://lit.dev/).
+A `<qr-code>` web component powered by [Lit](https://lit.dev/).
 
 ## Install
 
