@@ -49,6 +49,9 @@
     "postncu": "npm i"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@semantic-release/git": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
     "@vitest/browser": "^0.34.4",
@@ -58,6 +61,7 @@
     "npm-check-updates": "^16.13.3",
     "playwright": "^1.37.1",
     "rollup-plugin-minify-html-literals-v3": "^1.3.3",
+    "semantic-release": "^21.1.1",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
     "vitest": "^0.34.4"
